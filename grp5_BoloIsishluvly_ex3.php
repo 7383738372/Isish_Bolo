@@ -2,7 +2,7 @@
 $fileName = 'sample.txt';
 
 if (file_exists($fileName)) {
-    echo "Jay Mark.\n";
+    echo "Isish Luvly.\n";
     
     $fileContents = file_get_contents($fileName);
     echo "BSIT-3G:\n";
