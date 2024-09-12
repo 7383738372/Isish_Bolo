@@ -1,18 +1,15 @@
 <?php
 $fileName = 'sample.txt';
 
-
 if (file_exists($fileName)) {
     echo "Isish Bolo.\n";
     
-    
- file_get_contents($fileName);
+    $fileContents = file_get_contents($fileName);
     if ($fileContents === false) {
         echo "Error reading the file.\n";
     } else {
         echo "File contents:\n";
         echo $fileContents . "\n";  
-
 
         $lines = file($fileName, FILE_IGNORE_NEW_LINES);
         if ($lines === false) {
@@ -27,7 +24,6 @@ if (file_exists($fileName)) {
 } else {
     echo "File does not exist.\n";
     
-
     $initialContent = "This is the initial content of the file.\n";
     $result = file_put_contents($fileName, $initialContent);
     if ($result === false) {
@@ -35,7 +31,6 @@ if (file_exists($fileName)) {
     } else {
         echo "File created and content written.\n";
         
-
         $fileContents = file_get_contents($fileName);
         if ($fileContents === false) {
             echo "Error reading the file.\n";
